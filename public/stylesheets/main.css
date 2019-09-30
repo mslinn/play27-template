@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(203, 190, 54, 0.58);
   color: #4C0D0D;
   padding: 0.4em;
+  display: block;
 }
 
 input[type=text] {

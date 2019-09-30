@@ -6,9 +6,9 @@
     <head>
       <title>@title</title>
       <link rel="shortcut icon" type="image/png" href="@assets.path("images/favicon.png")">
-      <script src='@webJarsUtil.locate("jquery.min.js")'></script>
-      <script src='@webJarsUtil.locate("bootstrap.min.js")'></script>
-      <link href='@webJarsUtil.locate("css/bootstrap.min.css")' rel="stylesheet" />
+      @webJarsUtil.locate("jquery.min.js").script()
+      @webJarsUtil.locate("bootstrap.min.js").script()
+      @webJarsUtil.locate("css/bootstrap.min.css").css()
       <link rel="stylesheet" href="@assets.path("stylesheets/main.css")">
     </head>
     <body>

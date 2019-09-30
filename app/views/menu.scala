@@ -22,7 +22,7 @@ object menu {
             |    ${ listItem(PathRoutes.index, "Routes") }
             |  </ul>
             |  <ul class="nav navbar-nav navbar-right">
-            |    ${ listItem(Call("GET", "https://github.com/mslinn/play26-template"), "GitHub")}
+            |    ${ listItem(Call("GET", "https://github.com/mslinn/play27-template"), "GitHub")}
             |  </ul>
             |  <ul class="nav navbar-nav">
             |  </ul>
