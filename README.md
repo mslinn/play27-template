@@ -33,7 +33,7 @@ Remember to make the script executable!
 ```bash
 $ chmod a+x /usr/local/bin/play27Template
 ```
-Now you can use the script to make new Play Framework for Scala projects:
+Now you can use the `play27Template` script to make new Play Framework for Scala projects:
 
 ```bash
 $ play27Template newProjectName

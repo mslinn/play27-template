@@ -4,12 +4,13 @@
 
 import sbt._
 import sbt.Keys._
+import Settings._
 
 developers := List(  // TODO put your information here
-  Developer("mslinn",
+  Developer(gitHubId,  // defined in project/Settings.scala
             "Mike Slinn",
             "mslinn@micronauticsresearch.com",
-            url("https://github.com/mslinn")
+            url(s"https://github.com/$gitHubId")
   )
 )
 
@@ -42,7 +43,7 @@ javacOptions ++= Seq(
 
 javaOptions in Test += "-Dconfig.file=conf/dev.conf"
 
-libraryDependencies ++= Seq(
+libraryDependencies ++= Seq( // TODO (un)comment dependencies that your project requires
 //  anorm,
 //  cache,
 //  evolutions,
@@ -74,7 +75,7 @@ logLevel := Level.Warn
 logLevel in compile := Level.Warn
 logLevel in test := Level.Info // Level.Info is needed to see detailed output when running tests
 
-name         := "play27-template" // TODO change "play26-template" to a project name that you like
+name         := "play27-template" // TODO change "play27-template" to a project name that you like
 
 organization := "com.micronautics"
 
@@ -97,13 +98,13 @@ scalacOptions ++= Seq(
 scalaVersion := "2.13.1"
 
 scmInfo := Some(
-  ScmInfo( // TODO change this for your project
-    url(s"https://github.com/mslinn/$name"),
-    s"git@github.com:mslinn/$name.git"
+  ScmInfo(
+    url(s"https://github.com/$gitHubId/$name"),
+    s"git@github.com:$gitHubId/$name.git"
   )
 )
 
-version      := "0.4.0"
+version := "2.7.3.1"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 enablePlugins(ApiMappings)
