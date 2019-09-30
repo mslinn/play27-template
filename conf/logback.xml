@@ -1,0 +1,51 @@
+<!-- See https://scalacourses.com/student/showLecture/129 and https://scalacourses.com/student/showLecture/19-->
+<configuration debug="${LOGGER_DEBUG:-false}">
+  <conversionRule conversionWord="coloredLevel" converterClass="play.api.libs.logback.ColoredLevel" />
+
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+     <file>${application.home:-.}/logs/application.log</file>
+     <encoder>
+       <pattern>%date - [%level] - from %logger in %thread %n%message%n%xException%n</pattern>
+     </encoder>
+   </appender>
+
+  <appender name="CONFIG" class="ch.qos.logback.core.FileAppender">
+      <file>${application.home:-.}/logs/config.log</file>
+      <append>false</append>
+      <encoder>
+        <pattern>%date - [%level] - %logger{36} - %n%message%n%xException%n</pattern>
+      </encoder>
+    </appender>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%coloredLevel %logger{15} - %message%n%xException{5}</pattern>
+    </encoder>
+  </appender>
+
+  <!-- # level of
+       # request         effective level q
+       #         TRACE  DEBUG INFO  WARN  ERROR OFF
+       # TRACE    YES   NO    NO    NO    NO    NO
+       # DEBUG    YES   YES   NO    NO    NO    NO
+       # INFO     YES   YES   YES   NO    NO    NO
+       # WARN     YES   YES   YES   YES   NO    NO
+       # ERROR    YES   YES   YES   YES   YES   NO
+       # See http://logback.qos.ch/manual/architecture.html -->
+  <logger name="akka.actor" level="{LOGGER_AKKA_ACTOR:-INFO}" additivity="false">
+    <appender-ref ref="CONFIG" />
+  </logger>
+  <logger name="application"          level="${LOGGER_APP:-WARN}" />
+  <logger name="model"                level="${LOGGER_MODEL:-WARN}" />
+  <logger name="controllers"          level="${LOGGER_CONTROLLERS:-WARN}" />
+  <logger name="paypal"               level="${LOGGER_PAYPAL:-WARN}" />
+  <logger name="play"                 level="${LOGGER_PLAY:-WARN}" />
+  <logger name="service"              level="${LOGGER_SERVICE:-WARN}" />
+  <logger name="test"                 level="${LOGGER_TEST:-WARN}" />
+  <logger name="views"                level="${LOGGER_VIEWS:-WARN}" />
+
+  <root level="${LOGGER_ROOT:-ERROR}">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
+  </root>
+</configuration>

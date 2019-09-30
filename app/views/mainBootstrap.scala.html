@@ -1,0 +1,27 @@
+@* See the [[https://scalacourses.com/student/showLecture/15 Twirl View Templates]] lecture. *@
+@import org.webjars.play.WebJarsUtil
+@(title: String)(content: Html)(implicit assets: AssetsFinder, request: RequestHeader, webJarsUtil: WebJarsUtil)
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>@title</title>
+      <link rel="shortcut icon" type="image/png" href="@assets.path("images/favicon.png")">
+      <script src='@webJarsUtil.url("jquery.min.js").get'></script>
+      <script src='@webJarsUtil.url("bootstrap.min.js").get'></script>
+      <link href='@webJarsUtil.url("css/bootstrap.min.css").get' rel="stylesheet" />
+      <link rel="stylesheet" href="@assets.path("stylesheets/main.css")">
+    </head>
+    <body>
+      <header class="jumbotron subhead" id="overview">
+        <div class="container">
+          <img src="@assets.path("images/play_full_color_123x64.png")" style="float: right; width: 100px; margin-top: 40px;"><h1>@title</h1>
+        </div>
+      </header>
+      <div class="container">
+        @menu()
+        <div class="row">
+          @content
+        </div>
+      </div>
+    </body>
+</html>

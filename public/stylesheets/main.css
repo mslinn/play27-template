@@ -1,0 +1,72 @@
+code, pre {
+  color: #001300;
+}
+
+.code, code, tt, pre {
+  font-family: "DejaVu Sans Serif Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  background-color: rgba(203, 190, 54, 0.58);
+  color: #4C0D0D;
+  padding: 0.4em;
+}
+
+input[type=text] {
+  font-family: 'DejaVu Sans Mono', monospace;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited, .btn-primary:link {
+  background-color: #CBBE36;
+  border-color: #CBBE36;
+  color: #4C0D0D;
+}
+
+.btn-primary:hover {
+  border-color: #4C0D0D;
+}
+
+.info {
+  font-style: italic;
+}
+
+.jumbotron {
+  color: #CBBE36;
+  background-image: linear-gradient(to bottom, rgba(15, 74, 242, 0.71) 0px, #4C0D0D 100%);
+  padding: 0;
+}
+
+.jumbotron h1 {
+  background-color: inherit;
+  color: #CBBE36;
+  opacity: 1;
+}
+
+.navbar-inverse, .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+  background-color: #4C0D0D;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #CBBE36;
+}
+
+.navbar-right {
+  margin-right: 0.5em;
+}
+
+.right {
+  float: right;
+  margin-right: 1em;
+}
+
+.text-success {
+  padding: 5pt;
+  color: black;
+  background: #dff0d8;
+}
+
+.text-error {
+  padding: 5pt;
+  color: white;
+  background: red;
+}
