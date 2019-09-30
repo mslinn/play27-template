@@ -81,9 +81,9 @@ organization := "com.micronautics"
 parallelExecution in Test := false
 
 resolvers ++= Seq(
-  "webjars" at "http://webjars.github.com/m2",
+  "webjars" at "https://webjars.github.com/m2",
   //Resolver.file("Local Repository", file(sys.env.get("PLAY_HOME").map(_ + "/repository/local").getOrElse("")))(Resolver.ivyStylePatterns),
-  Resolver.url("play-plugin-releases", new URL("http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/"))(Resolver.ivyStylePatterns)
+  Resolver.url("play-plugin-releases", new URL("https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/"))(Resolver.ivyStylePatterns)
 )
 
 scalacOptions ++= Seq(
@@ -91,14 +91,7 @@ scalacOptions ++= Seq(
   "-encoding", "UTF-8",
   "-feature",
   "-target:jvm-1.8",
-  "-unchecked",
-  "-Ywarn-adapted-args",
-  "-Ywarn-dead-code",
-  "-Ywarn-numeric-widen",
-  "-Ywarn-unused",
-  "-Ywarn-value-discard",
-  "-Xfuture",
-  "-Xlint"
+  "-unchecked"
 )
 
 scalaVersion := "2.13.1"

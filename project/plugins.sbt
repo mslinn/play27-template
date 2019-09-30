@@ -3,7 +3,7 @@ import sbt.Keys._
 
 resolvers ++= Seq(
   "Typesafe repository" at "https://repo.typesafe.com/typesafe/releases/",
-  "SBT Community repository" at "http://dl.bintray.com/sbt/sbt-plugin-releases/"
+  "SBT Community repository" at "https://dl.bintray.com/sbt/sbt-plugin-releases/"
 )
 
 // Comment to get more information during initialization
