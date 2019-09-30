@@ -87,6 +87,7 @@ Reload `~/.bash_profile`
 Create a new SBT project and create a new GitHub project, which `hub` automatically adds as a `git` `remote`:
 
     $ play27Template bigBadProject
+    $ cd bigBadProject
     $ git create -d "Project description"
     two-factor authentication code: 881078
     Updating origin
