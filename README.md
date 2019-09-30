@@ -31,7 +31,7 @@ echo "Remember to edit README.md and build.sbt ASAP"
 
 Remember to make the script executable!
 ```bash
-$ chmod a+x /usr/local/bin/play27-template
+$ chmod a+x /usr/local/bin/play27Template
 ```
 
 ## Using GitHub?
