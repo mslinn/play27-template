@@ -33,6 +33,18 @@ Remember to make the script executable!
 ```bash
 $ chmod a+x /usr/local/bin/play27Template
 ```
+Now you can use the script to make new Play Framework for Scala projects:
+
+```bash
+$ play27Template newProjectName
+```
+
+Now you can use `sbt` to run and test your project.
+
+```bash
+$ cd newProjectName
+$ sbt -jvm-debug 9999 run
+```
 
 ## Using GitHub?
 
