@@ -11,6 +11,29 @@ Links to the appropriate ScalaCourses.com lectures are provided in each file.
 The [Standard Files and Directories and Improved Template](https://scalacourses.com/student/showLecture/169)
 lecture discusses this GitHub project in detail.
 
+## Bash Script
+This template is best used in conjunction with a bash script that looks like this, which you might place in `/usr/local/bin/play27Template`:
+
+```bash
+#!/bin/bash
+
+# Clones play27-template and starts a new SBT project
+# Optional argument specifies name of directory to place the new project into
+
+DIR=sbtTemplate
+if [ "$1" ]; then DIR="$1"; fi
+git clone https://github.com/mslinn/play27-template.git "$DIR"
+cd "$DIR"
+rm -rf .git
+git init
+echo "Remember to edit README.md and build.sbt ASAP"
+```
+
+Remember to make the script executable!
+```bash
+$ chmod a+x /usr/local/bin/play27-template
+```
+
 ## Using GitHub?
 
 ### GitHub Pages
