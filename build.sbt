@@ -70,6 +70,8 @@ libraryDependencies ++= Seq( // TODO (un)comment dependencies that your project 
   "junit"                  %  "junit"              % "4.12"  % Test
 )
 
+licenses += ("CC0", url("https://creativecommons.org/publicdomain/zero/1.0/"))
+
 logBuffered in Test := false
 logLevel := Level.Warn
 logLevel in compile := Level.Warn
