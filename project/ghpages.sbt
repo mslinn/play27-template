@@ -1,13 +1,15 @@
-/* Copyright 2012-2019 Micronautics Research Corporation.
+/* The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or
+ * her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.
  *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
- * the License. You may obtain a copy of the License at
+ * You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ * In no way are the patent or trademark rights of any person affected by CC0, nor are the rights that other persons may
+ * have in the work or in how the work is used, such as publicity or privacy rights.
+ * Unless expressly stated otherwise, the person who associated a work with this deed makes no warranties about the work,
+ * and disclaims liability for all uses of the work, to the fullest extent permitted by applicable law.
+ * When using or citing the work, you should not imply endorsement by the author or the affirmer.
  *
- * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
- * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations under the License. */
+ * The full legal text is here: https://creativecommons.org/publicdomain/zero/1.0/legalcode */
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-site" % "1.4.0")
+addSbtPlugin("com.typesafe.sbt" % "sbt-site"    % "1.4.0")
 addSbtPlugin("com.typesafe.sbt" % "sbt-ghpages" % "0.6.3")

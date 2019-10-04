@@ -1,3 +1,16 @@
+/* The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or
+ * her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.
+ *
+ * You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
+ *
+ * In no way are the patent or trademark rights of any person affected by CC0, nor are the rights that other persons may
+ * have in the work or in how the work is used, such as publicity or privacy rights.
+ * Unless expressly stated otherwise, the person who associated a work with this deed makes no warranties about the work,
+ * and disclaims liability for all uses of the work, to the fullest extent permitted by applicable law.
+ * When using or citing the work, you should not imply endorsement by the author or the affirmer.
+ *
+ * The full legal text is here: https://creativecommons.org/publicdomain/zero/1.0/legalcode */
+
 // See the [https://scalacourses.com/student/showLecture/84](SBT Global Setup),
 // [https://scalacourses.com/student/showLecture/135](SBT Project Setup) and
 // [https://scalacourses.com/student/showLecture/169](Standard Files and Directories and Improved Template) lectures
@@ -54,7 +67,7 @@ libraryDependencies ++= Seq( // TODO (un)comment dependencies that your project 
 //  ws,
 //  "com.typesafe.play"      %% "play-mailer"        % "6.0.1" withSources(),
 //  "com.typesafe.play" %% "play-mailer-guice" % "6.0.1" withSources(),
-  "com.typesafe.akka"      %% "akka-slf4j"         % "2.5.25",
+  "com.typesafe.akka"      %% "akka-slf4j"         % "2.5.23",
   "net.codingwell"         %% "scala-guice"        % "4.2.6",
   "org.webjars"            %% "webjars-play"       % "2.7.3",
   "org.webjars"            %  "bootstrap"          % "4.3.1",
@@ -106,7 +119,7 @@ scmInfo := Some(
   )
 )
 
-version := "2.7.3.1"
+version := "2.7.3.2"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 enablePlugins(ApiMappings)
