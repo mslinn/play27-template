@@ -65,22 +65,25 @@ libraryDependencies ++= Seq( // TODO (un)comment dependencies that your project 
 //  jdbc,
 //  json,
 //  ws,
-//  "com.typesafe.play"      %% "play-mailer"        % "6.0.1" withSources(),
-//  "com.typesafe.play" %% "play-mailer-guice" % "6.0.1" withSources(),
-  "com.typesafe.akka"      %% "akka-slf4j"         % "2.5.23",
-  "net.codingwell"         %% "scala-guice"        % "4.2.6",
-  "org.webjars"            %% "webjars-play"       % "2.7.3",
-  "org.webjars"            %  "bootstrap"          % "4.3.1",
-//  "com.github.tototoshi"   %% "slick-joda-mapper"  % "2.4.1" withSources(),
-  "com.typesafe"           %  "config"             % "1.3.4" withSources(),
-//  "com.typesafe.slick"     %% "slick"              % "3.3.2" withSources(),
-//  "com.typesafe.play"      %% "play-slick"         % "4.0.2" withSources(),
-//  "org.postgresql"         % "postgresql"          % "42.2.8" withSources(),
-  "org.webjars"            %  "jquery-ui"          % "1.12.1",
-  "org.webjars"            %  "jquery-ui-themes"   % "1.12.1",
+//  "com.typesafe.play"         %% "play-mailer"        % "6.0.1" withSources(),
+//  "com.typesafe.play"         %% "play-mailer-guice" % "6.0.1" withSources(),
+  "com.typesafe.akka"         %% "akka-slf4j"         % "2.5.23",
+  "net.codingwell"            %% "scala-guice"        % "4.2.6",
+  "org.webjars"               %% "webjars-play"       % "2.7.3",
+  "org.webjars"               %  "bootstrap"          % "4.3.1",
+//  "com.github.tototoshi"      %% "slick-joda-mapper"  % "2.4.1" withSources(),
+  "com.typesafe"              %  "config"             % "1.3.4" withSources(),
+//  "com.typesafe.slick"        %% "slick"              % "3.3.2" withSources(),
+  "com.github.vital-software" %% "json-annotation"      % "0.6.2"  withSources(),
+  "com.typesafe.play"         %% "play-json"            % "2.8.0"  withSources(),
+  "com.typesafe.play"         %% "play-json-joda"       % "2.8.0"  withSources(),
+//  "com.typesafe.play"         %% "play-slick"         % "4.0.2" withSources(),
+//  "org.postgresql"            % "postgresql"          % "42.2.8" withSources(),
+  "org.webjars"               %  "jquery-ui"          % "1.12.1",
+  "org.webjars"               %  "jquery-ui-themes"   % "1.12.1",
   //
-  "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test,
-  "junit"                  %  "junit"              % "4.12"  % Test
+  "org.scalatestplus.play"    %% "scalatestplus-play" % "4.0.3" % Test,
+  "junit"                     %  "junit"              % "4.12"  % Test
 )
 
 licenses += ("CC0", url("https://creativecommons.org/publicdomain/zero/1.0/"))
@@ -110,6 +113,8 @@ scalacOptions ++= Seq(
   "-unchecked"
 )
 
+Global / onChangedBuildSource := ReloadOnSourceChanges
+
 scalaVersion := "2.13.1"
 
 scmInfo := Some(
@@ -119,7 +124,7 @@ scmInfo := Some(
   )
 )
 
-version := "2.7.3.2"
+version := "2.7.3.3"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 enablePlugins(ApiMappings)
